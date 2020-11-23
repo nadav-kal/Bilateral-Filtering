@@ -21,8 +21,8 @@ for p_x = half_window_size: Rows-half_window_size
         I_p_output = 0.0;    
         W_p = 0.0;    
 
-        for r = 1: window_size  % run of window rows
-            for c = 1: window_size % run of window columns
+        for r = 1: window_size
+            for c = 1: window_size
                 q_x = p_x-half_window_size+r;
                 q_y = p_y-half_window_size+c;
                 Q = [q_x q_y];
