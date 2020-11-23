@@ -7,7 +7,7 @@ Gaussian = @(x, sigma) ((1/(2*pi*sigma^2)) * e^(-(x^2) / (2*sigma^2))); % Gaussi
 image_input = imread("lena.png");
 sigma_s = 8;
 sigma_r = 0.2;
-window_size = 7;
+window_size = 9;
 half_window_size = ceil(window_size/2);
 
 image_input = rgb2ycbcr(image_input);
