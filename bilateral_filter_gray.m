@@ -5,9 +5,9 @@ close all;
 Gaussian = @(x, sigma) ((1/(2*pi*sigma^2)) * e^(-(x^2) / (2*sigma^2))); % Gaussian function
 
 image_input = double(imread("lena.png"))/255.0;
-sigma_s = 8;
-sigma_r = 0.2;
-window_size = 9;
+sigma_s = 10;
+sigma_r = 0.1;
+window_size = 5;
 half_window_size = ceil(window_size/2);
 [Rows, Columns] = size(image_input);
 
