@@ -4,10 +4,10 @@ close all;
 
 Gaussian = @(x, sigma) ((1/(2*pi*sigma^2)) * e^(-(x^2) / (2*sigma^2))); % Gaussian function
 
-image_input = imread("lena.png");
-sigma_s = 8;
-sigma_r = 0.2;
-window_size = 9;
+image_input = imread("river.png");
+sigma_s = 10;
+sigma_r = 0.1;
+window_size = 5;
 half_window_size = ceil(window_size/2);
 
 image_input = rgb2ycbcr(image_input);
@@ -48,4 +48,4 @@ output = ycbcr2rgb(output);
 imshow(output);
 parameters = sprintf("sigma_s = %d sigma_r = %d window = %d", sigma_s, sigma_r, window_size);
 title(parameters)
-imwrite(output, "lena_filtered.png");
+imwrite(output, "river_filtered.png");
